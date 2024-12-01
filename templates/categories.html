@@ -1,10 +1,12 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1>Categories</h1>
-<ul>
-    {% for category in categories %}
-    <li>{{ category.name }}</li>
-    {% endfor %}
-</ul>
+<div class="text-center py-5">
+    <h1>Categories</h1>
+    <ul class="list-unstyled">
+        {% for category in categories %}
+        <li class="mb-2">{{ category.name }}</li>
+        {% endfor %}
+    </ul>
+</div>
 {% endblock %}

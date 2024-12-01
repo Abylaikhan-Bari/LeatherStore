@@ -1,19 +1,21 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1 class="text-center mb-4">Our Products</h1>
+<h1 class="text-center mb-5">Our Products</h1>
 <div class="row row-cols-1 row-cols-md-3 g-4">
     {% for product in products %}
     <div class="col">
-        <div class="product-card">
+        <div class="card h-100 shadow-sm">
             {% if product.image %}
-            <img src="{{ product.image.url }}" class="img-fluid" alt="{{ product.name }}">
+            <img src="{{ product.image.url }}" class="card-img-top" alt="{{ product.name }}">
             {% else %}
-            <img src="/static/images/placeholder.png" class="img-fluid" alt="{{ product.name }}">
+            <img src="/static/images/placeholder.png" class="card-img-top" alt="{{ product.name }}">
             {% endif %}
-            <h5>{{ product.name }}</h5>
-            <p>{{ product.description }}</p>
-            <p class="text-primary fw-bold">${{ product.price }}</p>
+            <div class="card-body">
+                <h5 class="card-title">{{ product.name }}</h5>
+                <p class="card-text">{{ product.description }}</p>
+                <p class="fw-bold text-primary">${{ product.price }}</p>
+            </div>
         </div>
     </div>
     {% endfor %}
