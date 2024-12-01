@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Admin Dashboard</h1>
+<h2>Products</h2>
+<a href="{% url 'add_product' %}" class="btn btn-primary mb-3">Add Product</a>
+<ul>
+    {% for product in products %}
+    <li>{{ product.name }} - {{ product.price }}</li>
+    {% endfor %}
+</ul>
+
+<h2>Categories</h2>
+<a href="{% url 'add_category' %}" class="btn btn-primary mb-3">Add Category</a>
+<ul>
+    {% for category in categories %}
+    <li>{{ category.name }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}
