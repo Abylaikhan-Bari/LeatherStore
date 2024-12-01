@@ -66,3 +66,15 @@ footer {
     padding: 1rem 0;
     text-align: center;
 }
+
+.btn-primary {
+    background-color: #443a30; /* Brown button */
+    color: white; /* White text */
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #5c4b3a; /* Slightly lighter brown for hover */
+    color: white;
+}
+
