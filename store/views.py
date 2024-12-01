@@ -21,3 +21,7 @@ def contact(request):
         message = request.POST.get('message')
         # Save or process the data (e.g., send email)
     return render(request, 'contact.html')
+
+def category_list(request):
+    categories = Category.objects.all()  # Fetch all categories
+    return render(request, 'categories.html', {'categories': categories})
