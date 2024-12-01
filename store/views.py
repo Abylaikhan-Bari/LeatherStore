@@ -1,8 +1,10 @@
 from django.shortcuts import render
-from .models import Product
+from .models import Product, Category
+
 
 def home(request):
-    return render(request, 'home.html')
+    categories = Category.objects.all()
+    return render(request, 'home.html', {'categories': categories})
 
 def product_list(request):
     products = Product.objects.all()

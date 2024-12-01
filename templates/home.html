@@ -6,4 +6,19 @@
     <p class="lead">Explore our finest collection of leather goods.</p>
     <a href="/products/" class="btn btn-light text-dark">View Products</a>
 </div>
+
+<div class="categories mt-5">
+    <h2 class="text-center mb-4">Categories</h2>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        {% for category in categories %}
+        <div class="col">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body text-center">
+                    <h5 class="card-title">{{ category.name }}</h5>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
 {% endblock %}

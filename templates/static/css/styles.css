@@ -22,6 +22,8 @@ nav ul {
     list-style: none;
     display: flex;
     gap: 20px;
+    margin: 0;
+    padding: 0;
 }
 
 nav ul li {
@@ -45,6 +47,16 @@ nav a:hover {
     border-radius: 8px;
 }
 
+ul.list-unstyled li {
+    font-size: 1.2rem;
+    color: #443a30;
+    margin-bottom: 0.5rem;
+}
+
+ul.list-unstyled li:hover {
+    font-weight: bold;
+}
+
 .product {
     background-color: #fff;
     border: 1px solid #ddd;
@@ -65,16 +77,18 @@ footer {
     color: white;
     padding: 1rem 0;
     text-align: center;
+    position: sticky;
+    bottom: 0;
+    width: 100%;
 }
 
 .btn-primary {
-    background-color: #443a30; /* Brown button */
-    color: white; /* White text */
+    background-color: #443a30;
+    color: white;
     border: none;
 }
 
 .btn-primary:hover {
-    background-color: #5c4b3a; /* Slightly lighter brown for hover */
+    background-color: #5c4b3a;
     color: white;
 }
-
